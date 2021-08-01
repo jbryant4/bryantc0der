@@ -19,7 +19,7 @@ const useStyles = makeStyles({
     root: {
         maxWidth: 500,
         color: '#537636',
-        backgroundColor: '#7f5f16'
+        backgroundColor: '#422e13'
     },
     media: {
         height: 350,
@@ -34,7 +34,7 @@ const useStyles = makeStyles({
         width: '100%',
         textAlign: "center",
         color: '#537636',
-        backgroundColor:'#537636'
+        backgroundColor:'#878532'
     },
     flexInner: {
         display: 'flex',
@@ -47,17 +47,22 @@ const useStyles = makeStyles({
     arrow: {
         fontSize: "50px",
         color: '#537636',
-        backgroundColor: '#537636'
+        
     },
     btn: {
-        color: '#537636',
-        backgroundColor: '#537636'
+        color: '#422e13',
+        backgroundColor: '#537636',
+        fontWeight: 'bold'
     },
     icon: {
         fontSize: 35
     },
     smldivs: {
         width: '50%'
+    },
+    p: {
+        fontWeight:'bold',
+        fontSize: 15
     }
 });
 
@@ -72,8 +77,7 @@ function Projects({ projects, currentProject, setCurrentProject }) {
     return (
         <div className={classes.flex}>
             <div>
-                <h2>Project</h2>
-                <p>{projectIndex() + 1}/{projects.length}</p>
+                <h1>Project: {projectIndex() + 1}/{projects.length} </h1>
             </div>
             <div className={classes.flexInner}>
                 <IconButton onClick={() => setCurrentProject(projects[projectIndex() - 1] || currentProject)}   aria-label="add to shopping cart">
@@ -90,7 +94,7 @@ function Projects({ projects, currentProject, setCurrentProject }) {
                             <Typography gutterBottom variant="h5" component="h2">
                                 {currentProject.title}
                             </Typography>
-                            <Typography variant="body2" component="p">
+                            <Typography variant="body2" component="p" className={classes.p}>
                                 {currentProject.description}
                             </Typography>
                         </CardContent>

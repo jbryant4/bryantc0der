@@ -22,6 +22,7 @@ const useStyles = makeStyles({
     alignItems: 'center',
     alignContent: 'center',
     justifyContent: 'center',
+    backgroundColor: '#333333'
 
   }
 });
